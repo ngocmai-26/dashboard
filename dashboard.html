@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Page Switcher</title>
+    <script>
+        let currentPage = 0;
+        const urls = [
+            'https://app.powerbi.com/reportEmbed?reportId=ec7a9093-ff8f-4e83-abbc-9355106d5e58&autoAuth=true&ctid=2f7f5cc2-41c3-407b-9e39-2f55fa8e5519&pageName=Dien_DienTu', // Page 1
+            'https://app.powerbi.com/reportEmbed?reportId=ec7a9093-ff8f-4e83-abbc-9355106d5e58&autoAuth=true&ctid=2f7f5cc2-41c3-407b-9e39-2f55fa8e5519&pageName=FIRA'  // Page 2
+        ];
+
+        function switchPage() {
+            currentPage = (currentPage + 1) % urls.length; // Chuyển đổi qua lại giữa 2 trang
+            document.getElementById("powerBiFrame").src = urls[currentPage];
+        }
+
+        setInterval(switchPage, 10000); // Chuyển trang mỗi 10 giây
+    </script>
+</head>
+
+<body style="height: 98vh;">
+    <iframe id="powerBiFrame" title="Power BI Dashboard" width="100%" height="80%"
+        src="https://app.powerbi.com/reportEmbed?reportId=ec7a9093-ff8f-4e83-abbc-9355106d5e58&autoAuth=true&ctid=2f7f5cc2-41c3-407b-9e39-2f55fa8e5519&pageName=Dien_DienTu"
+        frameborder="0" allowFullScreen="true" style="width: 100%; height: 100%;"></iframe>
+</body>
+
+</html>
