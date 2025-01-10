@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường Đại Học Bình Dương</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script src="/src/js/script.js"></script>
+
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="header">
+            <div class="logo">
+                <img src="/src/img/logo.png" alt="Logo" width="200">
+            </div>
+            <div style="display: flex; text-align: center; align-items: center; justify-content: center; width: 90%;">
+                <div class="title">TRƯỜNG ĐẠI HỌC BÌNH DƯƠNG</div>
+            </div>
+        </div>
+
+        <!-- Hoạt động hằng ngày -->
+        <div class="section">
+            <div class="section-title">Hoạt động hằng ngày</div>
+            <div class="button-group">
+                <button class="btn" onclick="showIframe('iframeDiemDanh')">Hoạt động học tập cơ sở chính</button>
+                <button class="btn" onclick="showIframe('iframeHoanghoaTham')">Hoạt động học tập cơ sở hoàng hoa
+                    thám</button>
+                <button class="btn">Giáo viên</button>
+                <button class="btn">Nhân viên</button>
+                <button class="btn"><a href="http://192.168.69.69:5005/" class="btn-link" width="100%"
+                        target="_blank">Bãi xe thông minh</a></button>
+                <button class="btn" onclick="showIframe('iframeThuVien')">Giờ thư viện</button>
+                <button class="btn" onclick="showIframe('iframeDiem')">Điểm học tập</button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Hoạt động tổng hợp -->
+        <div class="section">
+            <div class="section-title">Hoạt động tổng hợp</div>
+            <div class="button-group">
+                <button class="btn">Quản trị</button>
+                <button class="btn">Đào tạo</button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Đơn vị -->
+        <div class="section">
+            <div class="section-title">Đơn vị</div>
+            <div class="button-group">
+                <button class="btn" onclick="openModal()">Khoa IRA</button>
+                <button class="btn">Khoa Kinh tế</button>
+                <button class="btn" onclick="showIframe('iframe1')">Khoa Điện - điện tử</button>
+                <button class="btn">Khoa Kiến trúc - Xây dựng</button>
+                <button class="btn">Khoa Logistic và quản lý chuỗi cung ứng</button>
+                <button class="btn">Khoa Logistic</button>
+                <button class="btn">Khoa CNKT ô tô</button>
+                <button class="btn">Khoa Luật</button>
+                <button class="btn">Khoa Ngoại ngữ</button>
+                <button class="btn">Khoa CN thực phẩm</button>
+                <button class="btn">Khoa CN sinh học</button>
+                <button class="btn">Khoa Xã hội và nhân văn</button>
+                <button class="btn">Viện Dược học</button>
+                <button class="btn">Viện Châu Á học</button>
+            </div>
+        </div>
+    </div>
+    <div id="iraModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Khoa IRA</h2>
+
+
+            <div class="section">
+                <div class="button-group">
+                    <button class="btn" onclick="showIframe('iframe2')">Tổng quan</button>
+                    <button class="btn" onclick="">Khóa 24</button>
+                    <button class="btn" onclick="">Khóa 25</button>
+                    <button class="btn" onclick="showIframe('iframeK26Fira')">Khóa 26</button>
+                    <button class="btn" onclick="">Khóa 27</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="backButton" style="padding: 5px 5px;" onclick="goHome()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3L2 12h3v7h5v-4h4v4h5v-7h3L12 3z" fill="white" />
+        </svg>
+    </button> <!-- Mũi tên trái -->
+    <div id="iframeContainer">
+        <!-- Iframe Khoa FIRA -->
+
+        <iframe id="iframe2" style="display:none;" title="FIRA" width="100%" height="97vh"
+            src="https://app.powerbi.com/view?r=eyJrIjoiNzIxZWI4YjktNjEzMS00ZWE0LWFiYWQtMzc0N2E3ZjFjN2NkIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+            frameborder="0" allowFullScreen="true"></iframe>
+        <iframe id="iframe1" style="display:none;" title="Dien_DienTu" width="100%" height="97vh"
+            src="https://app.powerbi.com/view?r=eyJrIjoiMzU3MjgwM2YtOTUwOS00NGUwLTkyNTQtYWQ3MDQ5MzY4NjhkIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+            frameborder="0" allowFullScreen="true"></iframe>
+
+        <!-- Iframe Điểm Danh -->
+
+        <iframe id="iframeDiemDanh" style="display:none;" title="diem_danh" title="Diem_Danh_DM_1" width="100%"
+            height="97vh"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZmY3NDBjNmUtNzRjZC00N2YzLTk2NWYtYWY1OGIyYWFjYmNlIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+            frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="DASHBOARD_THU_VIEN_ODP" id="iframeThuVien" style="display:none;" title="diem_danh" width="100%"
+            height="97vh"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZmE5NmMwMmItM2RhNi00MmE4LWI5NjItNDVlMWE4MDdlMzBkIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+            frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="DASHBOARD_BANG_DIEM_ODP" width="100%" height="97vh" id="iframeDiem" style="display:none;"
+            title="diem_danh"
+            src="https://app.powerbi.com/view?r=eyJrIjoiOTRmMTllMjUtYTI1NS00NDYyLWExMzgtZjdjMGQxOTQwYmExIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+            frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="HoangHoaTham" id="iframeHoanghoaTham" style="display:none;" title="diem_danh" width="100%"
+            height="97vh"
+            src="https://app.powerbi.com/view?r=eyJrIjoiOGU1ZDBlZDktZGQ1YS00ZmRjLWFlMjAtOWQyOWQ0OTE1Y2JhIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+            frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="K26" id="iframeK26Fira" style="display:none;" title="diem_danh" width="100%"
+        height="97vh"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZjE1NTdjYzctMGU4MS00ZTRlLWFmMWMtNzUxZGZiYmQ0NDY5IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+            frameborder="0" allowFullScreen="true"></iframe>
+
+    </div>
+
+    <!-- Modal -->
+
+</body>
+
+</html>
