@@ -1,6 +1,7 @@
 function showIframe(id) {
     
-    closeModal();
+    closeModalIraModal();
+    closeModalAIDTIModal();
     // Ẩn trang chủ và hiển thị iframe tương ứng
     document.getElementById('container').style.display = 'none';
     document.getElementById('iframeContainer').style.display = 'block';
@@ -28,10 +29,19 @@ window.onscroll = function () {
     backButton.style.top = (window.scrollY + 20) + 'px'; // Cập nhật vị trí Y dựa trên vị trí cuộn
 };
 
-function openModal() {
+function openModalIraModal() {
     document.getElementById('iraModal').style.display = 'block';
+    document.getElementById('AIDTIModal').style.display = 'none';
 }
 
-function closeModal() {
+function closeModalIraModal() {
     document.getElementById('iraModal').style.display = 'none';
+}
+
+function openModalAIDTIModal() {
+    document.getElementById('AIDTIModal').style.display = 'block';
+}
+
+function closeModalAIDTIModal() {
+    document.getElementById('AIDTIModal').style.display = 'none';
 }

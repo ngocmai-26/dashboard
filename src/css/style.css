@@ -118,9 +118,10 @@ iframe {
     margin: 10% auto;
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: 65%;
     color: white;
     text-align: center;
+    justify-items: center
 }
 
 .modal .close {
@@ -165,4 +166,8 @@ iframe {
 #backButton:hover {
     background-color: #0056b3;
     /* Màu khi rê chuột */
+}
+
+#AIDTIModal {
+    z-index: 999999;
 }
