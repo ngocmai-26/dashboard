@@ -45,3 +45,24 @@ function openModalAIDTIModal() {
 function closeModalAIDTIModal() {
     document.getElementById('AIDTIModal').style.display = 'none';
 }
+
+function adjustIframeForMobileK25() {
+    let iframeContainer = document.getElementById("iframeK25Fira");
+    let iframeContainerMobile = document.getElementById("iframeMobileK25");
+
+    if (window.innerWidth < 768) {
+        iframeContainer.style.display = "none"; // Ẩn iframe trên desktop
+        iframeContainerMobile.style.display = "block"; // Hiện iframe mobile
+        iframeContainerMobile.innerHTML = `
+            <iframe class="powerbi-embed" width="100%" height="100%"
+                src="https://app.powerbi.com/view?r=eyJrIjoiMTMzZGQ3MDctMGJlYy00NTdjLWI5YzItZWQzYmU3MzNlMzZiIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+                frameborder="0" allowFullScreen="true"></iframe>
+        `;
+    } else {
+        iframeContainer.style.display = "block"; // Hiện iframe cho desktop
+        iframeContainerMobile.style.display = "none"; // Ẩn iframe mobile
+    }
+}
+
+window.onload = adjustIframeForMobileK25;
+window.onresize = adjustIframeForMobileK25;
