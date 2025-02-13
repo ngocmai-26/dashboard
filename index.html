@@ -25,15 +25,15 @@
         <div class="section">
             <div class="section-title">Hoạt động hằng ngày</div>
             <div class="button-group">
-                <button class="btn" onclick="showIframe('iframeDiemDanh')">Hoạt động học tập cơ sở chính</button>
-                <button class="btn" onclick="showIframe('iframeHoanghoaTham')">Hoạt động học tập cơ sở hoàng hoa
+                <button class="btn" onclick="showIframe('cosochinh')">Hoạt động học tập cơ sở chính</button>
+                <button class="btn" onclick="showIframe('hoanghoatham')">Hoạt động học tập cơ sở hoàng hoa
                     thám</button>
                 <button class="btn">Giáo viên</button>
                 <button class="btn">Nhân viên</button>
                 <button class="btn"><a href="http://192.168.69.69:5005/" class="btn-link" width="100%"
                         target="_blank">Bãi xe thông minh</a></button>
-                <button class="btn" onclick="showIframe('iframeThuVien')">Giờ thư viện</button>
-                <button class="btn" onclick="showIframe('iframeDiem')">Điểm học tập</button>
+                <button class="btn" onclick="showIframe('thuvien')">Giờ thư viện</button>
+                <button class="btn" onclick="showIframe('bangdiem')">Điểm học tập</button>
             </div>
         </div>
 
@@ -79,10 +79,10 @@
 
             <div class="section section-btn-modal">
                 <div class="button-group btn-modal">
-                    <button class="btn" onclick="showIframe('iframe2')">Tổng quan</button>
-                    <button class="btn" onclick="showIframe('iframeK24Fira')">Khóa 24</button>
-                    <button class="btn" onclick="showIframe('iframeK25Fira')">Khóa 25</button>
-                    <button class="btn" onclick="showIframe('iframeK26Fira')">Khóa 26</button>
+                    <button class="btn" onclick="showIframe('overviewFira')">Tổng quan</button>
+                    <button class="btn" onclick="showIframe('k24Fira')">Khóa 24</button>
+                    <button class="btn" onclick="showIframe('k25Fira')">Khóa 25</button>
+                    <button class="btn" onclick="showIframe('k26Fira')">Khóa 26</button>
                     <button class="btn" onclick="">Khóa 27</button>
                 </div>
             </div>
@@ -96,16 +96,16 @@
 
             <div class="section section-btn-modal">
                 <div class="button-group btn-modal ">
-                    <button class="btn" onclick="showIframe('iframemuctieu')">Mục tiêu 2025</button>
+                    <button class="btn" onclick="showIframe('tagertFira')">Mục tiêu 2025</button>
                     <button class="btn" onclick="openModalIraModal()">Khoa IRA</button>
-                    <button class="btn" onclick="showIframe('iframe1')">Khoa Điện - điện tử</button>
+                    <button class="btn" onclick="showIframe('overviewFEEE')">Khoa Điện - điện tử</button>
                     <button class="btn" onclick="">Trung tâm Chuyển đổi số</button>
                     <button class="btn" onclick="">Trung tâm STEAM AI</button>
                 </div>
             </div>
         </div>
     </div>
-    <button id="backButton" style="padding: 5px 5px;" onclick="goHome()">
+    <button id="backButton" onclick="goHome()">
         <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 24 24" fill="none">
             <path d="M12 3L2 12h3v7h5v-4h4v4h5v-7h3L12 3z" fill="white" />
         </svg>
@@ -117,78 +117,81 @@
     <div id="iframeContainer" class="powerbi-container">
         <!-- Khoa điện -->
 
-        <iframe id="iframe1" style="display:none;" title="Dien_DienTu" width="100%" height="97vh"
+        <iframe id="overviewFEEE-web" style="display:none;" title="Dien_DienTu" width="100%" height="97vh" data-id="overviewFEEE-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiOTQ2YWI3NGMtZDMzMi00NjE2LTgzYzItMDg4ZmY2ZjQxMzYwIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
         <!-- Chung -->
 
-        <iframe id="iframeDiemDanh" style="display:none;" title="Diem_Danh_DM_1" width="100%" height="97vh"
+        <iframe id="cosochinh-web" style="display:none;" title="Diem_Danh_DM_1" width="100%" height="97vh" data-id="cosochinh-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiMmFlMDJkZmMtMjc0ZS00NmY0LWFiZDItYzUxMDQxN2FhMWRhIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="DASHBOARD_THU_VIEN_ODP" id="iframeThuVien" style="display:none;" width="100%" height="97vh"
+        <iframe title="DASHBOARD_THU_VIEN_ODP" id="thuvien-web" style="display:none;" width="100%" height="97vh" data-id="thuvien-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiZmE5NmMwMmItM2RhNi00MmE4LWI5NjItNDVlMWE4MDdlMzBkIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="HoangHoaTham" id="iframeHoanghoaTham" style="display:none;" width="100%" height="97vh"
+        <iframe title="HoangHoaTham" id="hoanghoatham-web" style="display:none;" width="100%" height="97vh" data-id="hoanghoatham-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiODgzZDRiY2YtZWJhNS00YTJmLWE4NmQtMTZjNWEzMmUxNmY3IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
-            frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="DASHBOARD_BANG_DIEM_ODP" id="iframeDiem" style="display:none;" width="100%" height="97vh"
+            frameborder="0" allowFullScreen="true"></iframe> 
+        <iframe title="DASHBOARD_BANG_DIEM_ODP" id="bangdiem-web" style="display:none;" width="100%" height="97vh" data-id="bangdiem-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiOTI4Y2NiZDktMmMwYS00M2RkLTllODEtOTQ5YjNiODYxMmM0IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
 
         <!-- Iframe Khoa FIRA CNTT -->
-        <iframe id="iframe2" style="display:none;" title="FIRA" width="100%" height="97vh"
+        <iframe id="overviewFira-web" style="display:none;" title="FIRA" width="100%" height="97vh" data-id="overviewFira-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiNzkwNGY4NzctMDQ4NC00MWM4LTkyYzctOTg5ZjlkYjI1MTEwIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="K26FIRA" id="iframeK26Fira" style="display:none;" width="100%" height="97vh"
+        <iframe title="K26FIRA" id="k26Fira-web" style="display:none;" width="100%" height="97vh" data-id="k26Fira-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiN2YzOTA0MzYtMGY0Yi00NTI5LTkxZWEtOGU3ZWVjM2QzOTRjIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="K25FIRA" id="iframeK25Fira" style="display:none;" width="100%" height="97vh"
+        <iframe title="K25FIRA" id="k25Fira-web" style="display:none;" width="100%" height="97vh" data-id="k25Fira-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiNTczMjBiNmItNGE1Zi00MmJjLWE3YTAtOGIzMWRiODM4ODRmIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
         <div id="iframeMobileK25" style="display: none;"></div>
 
-        <iframe title="K24FIRA" id="iframeK24Fira" style="display:none;" width="100%" height="97vh"
+        <iframe title="K24FIRA" id="k24Fira-web" style="display:none;" width="100%" height="97vh" data-id="k24Fira-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiYzM1NTUzNDktNzc2MC00MWQxLWJhOWYtMTUxOGQ2YzQ4NTBkIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="Tổng kết" id="iframemuctieu" style="display:none;" width="100%" height="97vh"
+        <iframe title="Tổng kết" id="tagertFira-web" style="display:none;" width="100%" height="97vh" data-id="tagertFira-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiYjc5ZTZlNTAtNTBiNi00YWJhLTg1OTktMWI1MTRlZGU0NDEwIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
     </div>
 
-    <div id="iframeContainerMobile" style="display: none;">
+    <div id="iframeContainerMobile" class="powerbi-container">
         <!-- Chung -->
-        <!-- <iframe title="Thu_vien_mobile" width="600" height="373.5"
+        <iframe title="Thu_vien_mobile" width="100%" height="95vh" id="thuvien-mobile" style="display:none;" data-id="thuvien-mobile" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiOTBlODNkYzgtZmRmZC00NGFjLWJkNTItYjU4YWQyZDAxNjgzIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="HoangHoaTham_Mobile" width="600" height="373.5"
+        <iframe title="HoangHoaTham_Mobile" width="100%" height="95vh" id="hoanghoatham-mobile" data-id="hoanghoatham-mobile" data-type="web"
+            style="display:none;"
             src="https://app.powerbi.com/view?r=eyJrIjoiYzE4Mjg2NzktOGI5YS00NWU2LWJhMjQtZDRhYWQ5NjlkZjljIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="Diem_Danh_DM_1_Mobile" width="600" height="373.5"
+        <iframe title="Diem_Danh_DM_1_Mobile" width="100%" height="95vh" id="cosochinh-mobile" style="display:none;" data-id="cosochinh-mobile" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiNDg2YmNhM2UtNGYyYS00YWE2LTg4MDUtMzc0Zjg4MjMxMDcyIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
-            frameborder="0" allowFullScreen="true"></iframe> -->
+            frameborder="0" allowFullScreen="true"></iframe>
 
         <!-- Iframe Khoa FIRA CNTT -->
-        <!-- <iframe title="K25_Mobile" width="600" height="373.5"
+        <iframe title="K25_Mobile" width="100%" height="95vh" id="k25Fira-mobile" style="display:none;" data-id="k25Fira-mobile" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiMTMzZGQ3MDctMGJlYy00NTdjLWI5YzItZWQzYmU3MzNlMzZiIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
 
-        <iframe title="K26_Mobile" width="600" height="373.5"
+        <iframe title="K26_Mobile" width="100%" height="95vh" id="k26Fira-mobile" style="display:none;" data-id="k26Fira-mobile" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiYmU1MzMzNDUtNGYwNS00MzFmLWI1NTMtMGIzMzE4NmZkNjZmIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="K24_Mobile" width="600" height="373.5"
+        <iframe title="K24_Mobile" width="100%" height="95vh" id="k24Fira-mobile" style="display:none;" data-id="k24Fira-mobile" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiNzYxNzEyN2ItMThiOS00YzBiLWIzNDMtZjhmMTQwOGY5N2NmIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="FIRA_Mobile" width="600" height="373.5"
+        <iframe title="FIRA_Mobile" width="100%" height="95vh" id="overviewFira-mobile" style="display:none;" data-id="overviewFira-mobile" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiNjE4Yzg3NjMtY2UyOS00NGRjLTg1YWYtYWIwMWYyYTlhYWQ2IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
-            frameborder="0" allowFullScreen="true"></iframe> -->
+            frameborder="0" allowFullScreen="true"></iframe>
 
-        <!-- <iframe title="TongKetMobile" width="600" height="373.5"
+        <iframe title="TongKetMobile" width="100%" height="95vh" id="tagertFira-mobile" style="display:none;" data-id="tagertFira-web" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiMGRlMDkyNTUtZTBiYS00MjQ0LWE1NTMtMzFhMGViMTVjM2FmIiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
-            frameborder="0" allowFullScreen="true"></iframe> -->
+            frameborder="0" allowFullScreen="true"></iframe>
+
+            
         <!-- Khoa điện -->
-        <!-- <iframe title="Dien_DienTu_Mobile" width="600" height="373.5"
+        <iframe title="Dien_DienTu_Mobile" width="100%" height="95vh" id="overviewFEEE-mobile" style="display:none;" data-id="overviewFEEE-mobile" data-type="web"
             src="https://app.powerbi.com/view?r=eyJrIjoiMWViODVkMmEtN2YwZS00ZDUyLTgxZWMtYzY5OTYxMzgxNmM3IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
-            frameborder="0" allowFullScreen="true"></iframe> -->
+            frameborder="0" allowFullScreen="true"></iframe>
     </div>
 
     <!-- Modal -->
