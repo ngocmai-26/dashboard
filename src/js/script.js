@@ -20,6 +20,11 @@ function showIframe(id) {
         const selectedIframe = document.getElementById(iframeId);
         if (selectedIframe) {
             selectedIframe.style.display = "block";
+
+            // Nếu iframe chưa có src, thì mới gán để tránh load trước
+            if (!selectedIframe.src) {
+                selectedIframe.src = selectedIframe.getAttribute("data-src");
+            }
         }
     }
 
@@ -35,8 +40,7 @@ function showIframe(id) {
 
 function goHome() {
     // Quay về trang chủ
-    const iframes = document.querySelectorAll("iframe");
-    iframes.forEach(iframe => iframe.style.display = "none");
+    document.querySelectorAll("iframe").forEach(iframe => iframe.style.display = "none");
 
     document.getElementById('container').style.display = 'block';
     document.getElementById('iframeContainer').style.display = 'none';
