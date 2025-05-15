@@ -1,6 +1,7 @@
 function showIframe(id) {
     closeModalIraModal();
     closeModalAIDTIModal();
+    closeModalActivityModal();
 
     // Ẩn trang chủ và hiển thị iframe container
     document.getElementById('container').style.display = 'none';
@@ -62,10 +63,17 @@ function closeModalIraModal() {
     document.getElementById('iraModal').style.display = 'none';
 }
 
+function openModalActivityModal() {
+    document.getElementById('activityModal').style.display = 'block';
+}
 function openModalAIDTIModal() {
     document.getElementById('AIDTIModal').style.display = 'block';
 }
 
 function closeModalAIDTIModal() {
     document.getElementById('AIDTIModal').style.display = 'none';
+}
+
+function closeModalActivityModal() {
+    document.getElementById('activityModal').style.display = 'none';
 }

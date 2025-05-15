@@ -25,9 +25,8 @@
         <div class="section">
             <div class="section-title">Hoạt động hằng ngày</div>
             <div class="button-group">
-                <button class="btn" onclick="showIframe('cosochinh')">Hoạt động học tập cơ sở chính</button>
-                <button class="btn" onclick="showIframe('hoanghoatham')">Hoạt động học tập cơ sở hoàng hoa
-                    thám</button>
+                <button class="btn" onclick="openModalActivityModal()">Hoạt động học tập cơ sở chính</button>
+    
                 <button class="btn">Giáo viên</button>
                 <button class="btn">Nhân viên</button>
                 <button class="btn"><a href="http://192.168.69.69:5005/" class="btn-link" width="100%"
@@ -105,6 +104,21 @@
             </div>
         </div>
     </div>
+    <div id="activityModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalActivityModal()">&times;</span>
+            <h2>Cơ sở</h2>
+
+
+            <div class="section section-btn-modal">
+                <div class="button-group btn-modal ">
+                    <button class="btn" onclick="showIframe('cosochinhkhua')">Khu A Cơ sở Chính</button>
+                    <button class="btn" onclick="showIframe('cosochinhkhub')">Khu B Cơ sở Chính</button>
+                    <button class="btn" onclick="showIframe('cosochinhkhue')">Khu E Cơ sở HHT</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <button id="backButton" onclick="goHome()">
         <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 24 24" fill="none">
             <path d="M12 3L2 12h3v7h5v-4h4v4h5v-7h3L12 3z" fill="white" />
@@ -123,18 +137,24 @@
             frameborder="0" allowFullScreen="true"></iframe>
         <!-- Chung -->
 
-        <iframe id="cosochinh-web" style="display:none;" title="Diem_Danh_DM_1" width="100%" height="97vh"
-            data-id="cosochinh-web" data-type="web"
-            data-src="https://app.powerbi.com/view?r=eyJrIjoiN2QzMzIxOGItNGIwNi00NzUyLTk3NzUtYzlmZDljODY3ODc0IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+      
+        <iframe id="cosochinhkhua-web" data-id="cosochinhkhua-web" style="display:none;" data-type="web"
+            title="Diem_Danh_khu a" width="100%" height="97vh"
+            src="https://app.powerbi.com/view?r=eyJrIjoiMzU5ZjAwZTQtYTFmYS00MzI3LWFkOWEtMmRkMTdhNDc4NjY5IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="DASHBOARD_THU_VIEN_ODP" id="thuvien-web" style="display:none;" width="100%" height="97vh"                                                                    
+        <iframe id="cosochinhkhub-web" data-id="cosochinhkhub-web" style="display:none;" data-type="web"
+            title="Diem_Danh_DM_KHU B" width="100%" height="97vh"
+            src="https://app.powerbi.com/view?r=eyJrIjoiY2EzNWI4ZmItZjQxMy00YmM5LTljOTUtZDE1YTQxYmM1YmE2IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+            frameborder="0" allowFullScreen="true"></iframe>
+        <iframe id="cosochinhkhue-web" data-id="cosochinhkhue-web" style="display:none;" data-type="web"
+            title="Diem_Danh_khu E" width="100%" height="97vh"
+            src="https://app.powerbi.com/view?r=eyJrIjoiYjFiOWZmODYtNDJhYS00MDM5LTk1NTAtZGRhNjVhMTQ0NmE4IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
+            frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="DASHBOARD_THU_VIEN_ODP" id="thuvien-web" style="display:none;" width="100%" height="97vh"
             data-id="thuvien-web" data-type="web"
             data-src="https://app.powerbi.com/view?r=eyJrIjoiY2M0NmZmOTUtYmYwZi00NmYzLWIzZjYtNThhOTdlYmM4YWQ1IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="HoangHoaTham" id="hoanghoatham-web" style="display:none;" width="100%" height="97vh"
-            data-id="hoanghoatham-web" data-type="web"
-            data-src="https://app.powerbi.com/view?r=eyJrIjoiZTQ3YjQ1Y2UtNThkOC00OGRlLTg4MzktN2ZkOTJkNTdlMWE1IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
-            frameborder="0" allowFullScreen="true"></iframe>
+       
         <iframe title="DASHBOARD_BANG_DIEM_ODP" id="bangdiem-web" style="display:none;" width="100%" height="97vh"
             data-id="bangdiem-web" data-type="web"
             data-src="https://app.powerbi.com/view?r=eyJrIjoiYmVhOTM1NmEtNGU4MC00NjAwLWEwNzYtMDhiYmZjOGYzNjM0IiwidCI6ImE0OWExODJkLWNmYTItNDkyYy05YzViLTQwYzQyYzU1NzFiMyIsImMiOjEwfQ%3D%3D"
